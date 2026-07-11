@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-vikram-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # If using a GitHub repo, put the URL here. 
+    # If testing strictly locally, you'll need the repo accessible to the cluster.
+    repoURL: 'https://github.com/vikrampatil303/argocd-project.git' 
+    targetRevision: HEAD
+    path: .
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
