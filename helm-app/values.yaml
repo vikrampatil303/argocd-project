@@ -1,2 +1,2 @@
-replicaCount: 1
-greeting: "hello Vikram - Now powered by Helm!"
+replicaCount: 3
+greeting: "Scalling up the replica count....!!"
