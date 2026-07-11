@@ -1,0 +1,2 @@
+replicaCount: 1
+greeting: "hello Vikram - Now powered by Helm!"
